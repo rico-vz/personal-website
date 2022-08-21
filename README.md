@@ -1,27 +1,55 @@
-# PersonalPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+# Personal Portfolio/Website
 
-## Development server
+This is my personal website its sourcecode (preview can be found at https://ricovz.me)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I made it using Angular & TailwindCSS using the "Catppucin" color scheme.
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://ricovz.me
+## Installation
 
-## Build
+Install personal-portfolio with npm
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  npm install
+```
+    
+## Deployment
 
-## Running unit tests
+Install all dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  npm i
+```
 
-## Running end-to-end tests
+Run the Angular liveserver
+```bash
+  ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+You can now visit it at localhost:4200
 
-## Further help
+Ready to build and ship? 🚀
+```bash
+  ng build
+```
+or
+```bash
+  git remote add origin https://github.com/<username>/<repositoryname>.git
+```
+```bash
+  ng deploy --base-href=/<repositoryname>/
+```
+## Running Tests
+Run 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  ng e2e
+```
+To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Support
+
+To get more help on the Angular CLI use `ng help ` or go check out the Angular CLI Overview and Command Reference page.
