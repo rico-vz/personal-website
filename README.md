@@ -30,4 +30,4 @@ Services I used, inspiration & more.
 
 ## License
 
-[My website ricovz.me](https://ricovz.me) is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[ricovz.me](https://ricovz.me) is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
