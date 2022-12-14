@@ -6,11 +6,16 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "anhskohbo/no-captcha": "^3.4",
+        "artesaos/seotools": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/validation": "^3.2",
+        "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "romanzipp/laravel-validator-pizza": "^1.3",
+        "spatie/laravel-backup": "^8.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
