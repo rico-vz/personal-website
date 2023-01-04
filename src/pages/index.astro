@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BlogPosts from "../components/BlogPosts.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-neutral font-montserrat">
+    <Header title={SITE_TITLE} />
+    <main>
+      <div class="mt-10">
+        <h1
+          class="text-center text-neutral-content text-3xl font-bold mb-4 tracking-wide"
+        >
+          Latest posts
+        </h1>
+        <div class="flex justify-center">
+          <BlogPosts />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

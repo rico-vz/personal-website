@@ -1,0 +1,52 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<header class="font-jb-mono">
+  <div class="navbar bg-base-100 justify-around">
+    <div class="flex justify-between min-w-[50%]">
+      <div class="hidden md:flex">
+        <a
+          href="/"
+          class="btn btn-ghost normal-case text-xl text-primary tracking-wide"
+          >{SITE_TITLE}</a
+        >
+      </div>
+      <ul class="text-neutral-content menu menu-horizontal px-1">
+        <li><HeaderLink href="/">/home</HeaderLink></li>
+        <li><HeaderLink>/about</HeaderLink></li>
+        <li><HeaderLink>/links</HeaderLink></li>
+        <li><HeaderLink>/uses</HeaderLink></li>
+        <li>
+          <HeaderLink href="https://dev.to/ricovz" target="_blank"
+            >/blog</HeaderLink
+          >
+        </li>
+        <li><a href="mailto:ricovzelst@pm.me">@mail</a></li>
+        <div
+          class="tooltip tooltip-bottom tooltip-primary duration-300"
+          data-tip="Change theme"
+        >
+          <button
+            id="theme-button"
+            class="hidden md:inline-block text-base-content btn btn-ghost"
+            ><i class="fa-solid fa-rotate"></i>
+          </button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</header>
+<script is:inline>
+  const themeButton = document.getElementById("theme-button");
+
+  themeButton.addEventListener("click", function () {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme === "catLatte") {
+      document.documentElement.setAttribute("data-theme", "catMacchiato");
+    } else if (currentTheme === "catMacchiato") {
+      document.documentElement.setAttribute("data-theme", "catLatte");
+    }
+  });
+</script>

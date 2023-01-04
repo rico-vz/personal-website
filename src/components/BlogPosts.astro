@@ -1,0 +1,43 @@
+---
+const posts = await fetch("https://dev.to/api/articles?username=ricovz").then(
+  (res) => res.json()
+);
+
+const latestPosts = posts.slice(0, 3);
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+  {
+    latestPosts.map((post) => (
+      <div class="ml-14 mr-14 mb-2 md:ml-1 md:mr-1 card shadow-xl p-1 hover:bg-gradient-to-bl bg-gradient-to-tr from-base-200  to-base-300 hover:scale-[103.5%] duration-300">
+        <div class="card lg:w-96 bg-base-100 h-full hover:shadow-2xl">
+          <figure>
+            <a href={`${post.url}`} target="_blank" rel="noreferrer">
+              <img src={`${post.cover_image}`} alt="Article cover image" />
+            </a>
+          </figure>
+          <div class="card-body">
+            <a href={`${post.url}`} target="_blank" rel="noreferrer">
+              <h2 class="card-title text-base-content ">{post.title}</h2>
+            </a>
+            <p class="text-neutral-content mb-4">{post.description}</p>
+            <div class="card-actions justify-end mb-1">
+              <a href={`${post.url}`} target="_blank" rel="noreferrer">
+                <p class="text-base-content font-medium">
+                  Read article <i class="fa-solid fa-arrow-right-to-arc" />
+                </p>
+              </a>
+            </div>
+            <div class="card-actions justify-end ">
+              {post.tag_list.slice(0, 2).map((tag) => (
+                <span class="badge badge-outline text-primary px-2 py-4">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>
