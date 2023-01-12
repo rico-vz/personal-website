@@ -3,6 +3,9 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BlogPosts from "../components/BlogPosts.astro";
+import GithubProjects from "../components/GithubProjects.astro";
+import About from "../components/About.astro";
+import WhoAmI from "../components/WhoAmI.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import Analytics from "../components/Analytics.astro";
 ---
@@ -15,14 +18,37 @@ import Analytics from "../components/Analytics.astro";
   <body class="bg-neutral font-montserrat">
     <Header title={SITE_TITLE} />
     <main>
-      <div class="mt-10">
+      <div class="mt-6">
         <h1
-          class="text-center text-neutral-content text-3xl font-bold mb-4 tracking-wide"
+          class="text-center text-neutral-content text-3xl font-bold mb-6 tracking-wide"
         >
-          Latest posts
+          👋🏻 Hi, I'm <span class="text-primary">Rico.</span>
         </h1>
         <div class="flex justify-center">
+          <WhoAmI />
+        </div>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="mt-10">
+        <h2
+          class="text-center text-neutral-content text-3xl font-bold mb-4 tracking-wide"
+        >
+          Latest Posts
+        </h2>
+        <div class="flex justify-center">
           <BlogPosts />
+        </div>
+      </div>
+      <!-- GitHub Projects -->
+      <div class="mt">
+        <h2
+          class="text-center text-neutral-content text-3xl font-bold mb-4 tracking-wide"
+        >
+          Latest Projects
+        </h2>
+        <div class="flex justify-center">
+          <GithubProjects />
         </div>
       </div>
     </main>
