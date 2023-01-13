@@ -1,0 +1,22 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Analytics from "../components/Analytics.astro";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-neutral font-montserrat">
+    <Header title={SITE_TITLE} />
+    <main>
+      <div class="mt-6"></div>
+    </main>
+    <Footer />
+    <Analytics />
+  </body>
+</html>
