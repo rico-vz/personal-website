@@ -14,7 +14,15 @@ import Analytics from "../components/Analytics.astro";
   <body class="bg-neutral font-montserrat">
     <Header title={SITE_TITLE} />
     <main>
-      <div class="mt-6"></div>
+      <div class="mt-6">
+        <h1 class="text-center text-5xl font-extrabold mb-6 tracking-wide">
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            >About Me</span
+          >
+        </h1>
+        <About />
+      </div>
     </main>
     <Footer />
     <Analytics />
