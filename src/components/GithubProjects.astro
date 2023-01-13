@@ -5,9 +5,28 @@
 
 <script>
   const getLatestProjects = async () => {
+    // check if data is already stored in localStorage
+    const data = localStorage.getItem("latestProjects");
+    if (data) {
+      const { timestamp, projects } = JSON.parse(data);
+      // check if timestamp is older than 24 hours
+      if (Date.now() - timestamp < 24 * 60 * 60 * 1000) {
+        // data is still fresh, return stored data
+        return projects.slice(0, 6);
+      }
+    }
+
+    // data is not stored or is older than 24 hours, make new API call
     const projects = await fetch(
       "https://api.github.com/users/rico-vz/repos?sort=updated&direction=desc"
     ).then((res) => res.json());
+
+    // store data in localStorage with timestamp
+    localStorage.setItem(
+      "latestProjects",
+      JSON.stringify({ timestamp: Date.now(), projects })
+    );
+
     return projects.slice(0, 6);
   };
 
