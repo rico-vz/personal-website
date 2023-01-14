@@ -4,9 +4,9 @@
 <div id="latest-projects"></div>
 
 <script>
-  const getLatestProjects = async () => {
+  const getPopularProjects = async () => {
     // check if data is already stored in localStorage
-    const data = localStorage.getItem("latestProjects");
+    const data = localStorage.getItem("popularProjects");
     if (data) {
       const { timestamp, projects } = JSON.parse(data);
       // check if timestamp is older than 24 hours
@@ -28,7 +28,7 @@
 
     // store data in localStorage with timestamp
     localStorage.setItem(
-      "latestProjects",
+      "popularProjects",
       JSON.stringify({ timestamp: Date.now(), projects })
     );
 
@@ -83,5 +83,5 @@
     );
   };
 
-  getLatestProjects().then(appendProjectCards);
+  getPopularProjects().then(appendProjectCards);
 </script>
