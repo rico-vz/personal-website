@@ -60,14 +60,20 @@ const imgUrl = "https://og-img.ricovz.me/api/rico?title=" + title;
 <meta property="twitter:image" content={imgUrl} />
 
 <script is:inline>
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  if (window.matchMedia && currentTheme == null) {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  const currentTheme = localStorage.getItem("theme");
+  if (window.matchMedia) {
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       document.documentElement.setAttribute("data-theme", "catMacchiato");
     } else {
       document.documentElement.setAttribute("data-theme", "catLatte");
     }
   } else {
-    document.documentElement.setAttribute("data-theme", "catMacchiato");
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "catMacchiato");
+    }
   }
 </script>

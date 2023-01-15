@@ -62,8 +62,10 @@ import { SITE_TITLE } from "../config";
     const currentTheme = document.documentElement.getAttribute("data-theme");
     if (currentTheme === "catLatte") {
       document.documentElement.setAttribute("data-theme", "catMacchiato");
+      localStorage.setItem("theme", "catMacchiato");
     } else if (currentTheme === "catMacchiato") {
       document.documentElement.setAttribute("data-theme", "catLatte");
+      localStorage.setItem("theme", "catLatte");
     }
   });
 </script>
