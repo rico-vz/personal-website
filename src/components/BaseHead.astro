@@ -2,15 +2,13 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-import { themeChange } from "theme-change";
 
 export interface Props {
   title: string;
   description: string;
-  image?: string;
 }
 
-const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+const { title, description } = Astro.props;
 const imgUrl = "https://og-img.ricovz.me/api/rico?title=" + title;
 ---
 
@@ -64,6 +62,10 @@ const imgUrl = "https://og-img.ricovz.me/api/rico?title=" + title;
 <script is:inline>
   if (window.matchMedia) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme != null) {
+        return;
+      }
       document.documentElement.setAttribute("data-theme", "catMacchiato");
     } else {
       document.documentElement.setAttribute("data-theme", "catLatte");
