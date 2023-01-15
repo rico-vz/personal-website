@@ -61,11 +61,11 @@ const imgUrl = "https://og-img.ricovz.me/api/rico?title=" + title;
 
 <script is:inline>
   if (window.matchMedia) {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme != null) {
+      return;
+    }
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      if (currentTheme != null) {
-        return;
-      }
       document.documentElement.setAttribute("data-theme", "catMacchiato");
     } else {
       document.documentElement.setAttribute("data-theme", "catLatte");
