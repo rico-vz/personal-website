@@ -30,7 +30,7 @@ module.exports = {
 					"error": "#ee99a0",
 				},
 				catLatte: {
-					"primary": "#7287fd",
+					"primary": "#38427d",
 					"secondary": "#7287fd",
 					"accent": "#04a5e5",
 					"neutral": "#dce0e8",
