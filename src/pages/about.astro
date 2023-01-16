@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import Analytics from "../components/Analytics.astro";
+import SocialBanner from "../components/SocialBanner.astro";
 ---
 
 <html lang="en">
@@ -15,6 +16,7 @@ import Analytics from "../components/Analytics.astro";
     <Header title={SITE_TITLE} />
     <main>
       <div class="mt-6">
+        <SocialBanner />
         <h1 class="text-center text-5xl font-extrabold mb-6 tracking-wide">
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
