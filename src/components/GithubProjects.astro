@@ -62,7 +62,9 @@
                 View project <i class="inline-block"><svg width="0.67em" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M323.431,268.226,100.493,45.709a27.57,27.57,0,0,0-38.933,0l-26,25.957a27.444,27.444,0,0,0-.046,38.815L212.2,287.657,35.521,464.844a27.434,27.434,0,0,0,.046,38.815l26,25.957a27.57,27.57,0,0,0,38.933,0L323.431,307.087A27.448,27.448,0,0,0,323.431,268.226Z" transform="translate(70.507 -37.662)"></path></svg></i>
               </p>
             </a>
-          </div>
+          </div>        <div class="flex justify-center">
+          <SocialBanner />
+        </div>
         </div>
       </div>
     `;
@@ -76,7 +78,7 @@
       "grid-cols-1",
       "md:grid-cols-3",
       "gap-4",
-      "mb-12"
+      "mb-4"
     );
     projects.forEach((project) =>
       container.appendChild(createprojectCard(project))

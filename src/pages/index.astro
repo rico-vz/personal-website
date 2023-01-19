@@ -8,6 +8,7 @@ import WhoAmI from "../components/WhoAmI.astro";
 import { SITE_DESCRIPTION } from "../config";
 import Analytics from "../components/Analytics.astro";
 import SocialBanner from "../components/SocialBanner.astro";
+import LangsBanner from "../components/LangsBanner.astro";
 ---
 
 <!DOCTYPE html>
@@ -56,9 +57,11 @@ import SocialBanner from "../components/SocialBanner.astro";
             <GithubProjects />
           </div>
         </div>
+        <div class="flex justify-center mb-6">
+          <LangsBanner />
+        </div>
       </div>
       <Footer />
-      <Analytics />
     </main>
   </body>
 </html>
