@@ -4,19 +4,17 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import Analytics from "../components/Analytics.astro";
 import SocialBanner from "../components/SocialBanner.astro";
 import LangsBanner from "../components/LangsBanner.astro";
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title="About | Rico van Zelst" description={SITE_DESCRIPTION} />
   </head>
   <body class="bg-neutral font-montserrat">
     <Header title={SITE_TITLE} />
     <main>
-      <LangsBanner />
       <div class="mt-6">
         <h1 class="text-center text-5xl font-extrabold mb-6 tracking-wide">
           <span
@@ -25,12 +23,11 @@ import LangsBanner from "../components/LangsBanner.astro";
           >
         </h1>
         <About />
-        <div class="flex justify-center">
+        <div class="flex justify-center mb-8">
           <SocialBanner />
         </div>
       </div>
     </main>
     <Footer />
-    <Analytics />
   </body>
 </html>
