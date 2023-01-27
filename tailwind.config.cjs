@@ -20,8 +20,8 @@ module.exports = {
 			{
 				catMacchiato: {
 					"primary": "#a5b4fc",
-					"secondary": "#91d7e3",
-					"accent": "#99f6e4",
+					"secondary": "#91b0e3",
+					"accent": "#99c2f6",
 					"neutral": "#181926",
 					"base-100": "#24273a",
 					"info": "#8aadf4",
