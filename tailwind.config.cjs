@@ -18,6 +18,7 @@ module.exports = {
 		logs: false,
 		themes: [
 			{
+				// Catpuccin themes
 				catMacchiato: {
 					"primary": "#a5b4fc",
 					"secondary": "#91b0e3",
