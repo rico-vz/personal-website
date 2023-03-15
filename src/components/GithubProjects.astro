@@ -5,7 +5,7 @@
 
 <script>
   const getPopularProjects = async () => {
-    // check if data is already stored in localStorage
+    // cheddeck if data is already stored in localStorage
     const data = localStorage.getItem("popularProjects");
     if (data) {
       const { timestamp, projects } = JSON.parse(data);
