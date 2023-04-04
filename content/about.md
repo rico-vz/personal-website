@@ -7,24 +7,22 @@ description = "Rico van Zelst: Learn more about me."
 
 ## Introduction
 
-I'm Rico, a 19-year-old software engineering student at the Bit Academy. Whilst being a software engineering student, I also enjoy working on various projects.
-In my free time, I like to develop, watch movies, listen to music, and play games. I mostly use PHP and JavaScript, but I also like to use other languages, such as C++ and Python.
+My name is Rico van Zelst, and I am a highly motivated and dedicated 19-year-old software engineering student at Bit Academy. As a student of software engineering, I am deeply committed to expanding my knowledge and honing my skills in the field. In addition to my studies, I am also actively engaged in a variety of freelance web development projects that serve to further my understanding of the industry and its many nuances.
 
 
 ## Passion for Software Development
 
-I love seeking different ways to refine existing skills and further my knowledge. For as long as I can remember, I have been obsessed with all things tech, and I am looking forward to getting deep into software development for both the problem-solving and creative design aspects.
-Willing to assist organizations in building the best technical solutions in today's competitive market.
+Throughout my life, I have been fascinated by the world of technology and all that it has to offer. This passion has driven me to pursue a career in software development, where I am able to combine my love of problem-solving with my interest in creative design. I am dedicated to providing organizations with the best possible technical solutions in today's highly competitive market, and I am always eager to collaborate with others in order to achieve this goal. 
 
 
 
 ## Skill Set
 
 - **Development Languages:** PHP, JavaScript, Python, HTML, CSS, and C#
-- **Languages:** Dutch (Native), English (Fluent)
 - **Frameworks:** Laravel, Symfony, Tailwind CSS, Bootstrap, Wordpress and Astro
 - **Databases:** MySQL and MongoDB
 - **Tools:** Git, Docker, Linux, and Windows
+- **Languages:** Dutch (Native), English (Fluent)
 - **Other:** Scrum and Agile Methodologies
 
 
