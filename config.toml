@@ -10,6 +10,9 @@ timeZone = 'Europe/Amsterdam'
 watch = 'true'
 enableInlineShortcodes = true
 paginate = 3
+pygmentsstyle = "github-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto
@@ -18,3 +21,41 @@ paginate = 3
 	mathjax = false
 	katex = false
     favicon = "/rico-logo.png"
+
+# Socials
+[[params.social]]
+	name = "Email"
+	icon = "mail"
+	url = "mailto:ricovzelst@pm.me"
+
+[[params.social]]
+	name = "GitHub"
+	icon = "github"
+	url = "https://github.com/rico-vz"
+
+[[params.social]]
+	name = "LinkedIn"
+	icon = "linkedin"
+	url = "https://www.linkedin.com/in/ricovz/"
+
+
+# Main menu
+[[menu.main]]
+	name = "Home"
+	url = "/"
+	weight = 1
+
+[[menu.main]]
+	name = "About"
+	url = "/about"
+	weight = 2
+
+[[menu.main]]
+	name = "Posts"
+	url = "/posts"
+	weight = 3
+
+[[menu.main]]
+	name = "Tags"
+	url = "/tags"
+	weight = 4
