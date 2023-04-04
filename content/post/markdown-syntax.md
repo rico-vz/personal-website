@@ -2,11 +2,11 @@
 author = "Rico van Zelst"
 title = "Switching from Windows to Fedora: A Developer's Experience"
 date = "2023-01-09"
-description = "Fedora Workstation 37 is a reliable, customizable operating system with efficient package management, excellent performance, and community-driven development. Recommended for developers."
-tags = [
-    "linux",
-    "productivity",
-]
+description = "Fedora Workstation 37 is a reliable, customizable operating system with efficient package management, excellent performance, and community-driven development."
+tags = [ "linux", "productivity", "fedora" ]
+slug = "switching-windows-fedora-developer-experience"
+categories = [ "Operating Systems", "Technology" ]
+preview = "/fedora.png"
 +++
 
 As a passionate developer, I am constantly looking for ways to improve my workflow and increase my productivity. That's why, after almost a decade of Windows as my primary operating system, I decided to make the switch to Fedora Workstation 37 on my laptop. Here are a few reasons why I made the switch and why I think it's a great choice for other developers.
