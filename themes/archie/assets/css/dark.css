@@ -3,6 +3,10 @@ body {
   background-color: #202124;
 }
 
+.twitter-tweet {
+  color: #d3d3d3 !important;
+}
+
 ::-moz-selection {
   background: #b92044;
   color: #fff;
@@ -18,18 +22,21 @@ body {
 hr {
   border-top: 3px dotted #a8203e;
 }
+
 code {
   background-color: rgba(241, 241, 241, 0.589);
   color: black;
   text-decoration: bold;
   padding: 0.1em 0.2em;
 }
+
 pre {
   background-color: #242424;
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
 }
+
 blockquote {
   border-color: #93112f;
 }
@@ -42,26 +49,32 @@ h5,
 h6 {
   color: #ddd;
 }
+
 h1::before {
   color: var(--darkMaincolor);
   content: "# ";
 }
+
 h2::before {
   color: var(--darkMaincolor);
   content: "## ";
 }
+
 h3::before {
   color: var(--darkMaincolor);
   content: "### ";
 }
+
 h4::before {
   color: var(--darkMaincolor);
   content: "#### ";
 }
+
 h5::before {
   color: var(--darkMaincolor);
   content: "##### ";
 }
+
 h6::before {
   color: var(--darkMaincolor);
   content: "###### ";
@@ -71,6 +84,7 @@ a {
   border-bottom: 3px solid var(--darkMaincolor);
   color: inherit;
 }
+
 a:hover {
   background-color: var(--darkMaincolor);
   color: black;
@@ -79,6 +93,7 @@ a:hover {
 .site-description a {
   color: #ddd;
 }
+
 .site-description a:hover {
   color: black;
 }
@@ -86,6 +101,7 @@ a:hover {
 .tags a {
   border-bottom: 3px solid var(--darkMaincolor);
 }
+
 .tags a:hover {
   background-color: var(--darkMaincolor);
   color: black;
@@ -104,56 +120,66 @@ a:hover {
 .highlight {
   background-color: #333;
 }
+
 .soc:hover {
   color: black;
 }
+
 .draft-label {
   color: var(--darkMaincolor);
   background-color: #e81a48;
 }
+
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
   content: "js";
   background: #f7df1e;
   color: black;
 }
+
 .highlight pre code[class*='language-yml']::before,
 .highlight pre code[class*='language-yaml']::before {
   content: 'yaml';
   background: #f71e6a;
   color: white;
 }
+
 .highlight pre code[class*='language-shell']::before,
 .highlight pre code[class*='language-bash']::before,
 .highlight pre code[class*='language-sh']::before {
   content: 'shell';
   background: green;
-  color:white
+  color: white
 }
-.highlight pre code[class*='language-json']::before{
+
+.highlight pre code[class*='language-json']::before {
   content: 'json';
   background: dodgerblue;
-   color: #000000 
+  color: #000000
 }
+
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
   content: 'py';
   background: blue;
-  color: yellow ;
+  color: yellow;
 }
-.highlight pre code[class*='language-css']::before{
+
+.highlight pre code[class*='language-css']::before {
   content: 'css';
   background: cyan;
-  color: black ;
+  color: black;
 }
-.highlight pre code[class*='language-go']::before{
+
+.highlight pre code[class*='language-go']::before {
   content: 'Go';
   background: cyan;
-  color: royalblue ;
+  color: royalblue;
 }
+
 .highlight pre code[class*='language-md']::before,
-.highlight pre code[class*='language-md']::before{
+.highlight pre code[class*='language-md']::before {
   content: 'Markdown';
   background: royalblue;
-  color: whitesmoke ;
+  color: whitesmoke;
 }

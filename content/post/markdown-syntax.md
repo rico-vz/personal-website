@@ -1,148 +1,30 @@
 +++
-author = "Hugo Authors"
-title = "Markdown Syntax Guide"
-date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+author = "Rico van Zelst"
+title = "Switching from Windows to Fedora: A Developer's Experience"
+date = "2023-01-09"
+description = "Fedora Workstation 37 is a reliable, customizable operating system with efficient package management, excellent performance, and community-driven development. Recommended for developers."
 tags = [
-    "markdown",
-    "css",
-    "html",
+    "linux",
+    "productivity",
 ]
-categories = [
-    "themes",
-    "syntax",
-]
-series = ["Themes Guide"]
-aliases = ["migrate-from-jekyl"]
 +++
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-<!--more-->
+As a passionate developer, I am constantly looking for ways to improve my workflow and increase my productivity. That's why, after almost a decade of Windows as my primary operating system, I decided to make the switch to Fedora Workstation 37 on my laptop. Here are a few reasons why I made the switch and why I think it's a great choice for other developers.
 
-## Headings
+One of the biggest benefits of using Fedora is the level of customization it offers. With a wide range of desktop environments and tools available, I was able to easily customize the look and feel of my system to suit my preferences. This has been especially helpful as I've been learning the operating system, as I've been able to set things up in a way that works best for me.
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+One of the main reasons that prompted me to switch to Fedora was the Modern Standby (S0) issues I was experiencing on Windows. Modern Standby is a power-saving mode that is supposed to allow the computer to enter a low-power state while still maintaining connectivity and the ability to perform tasks in the background. However, I found that this feature often caused problems on my machine, such as battery drain. Since switching to Fedora, my battery life in general has significantly improved, and I'm not worried about my laptop being 1% after I closed it at 100% the day before.
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+In addition to the customization and Modern Standby issues, I've found that using Fedora has helped to increase my productivity. The operating system is stable, fast, and efficient, which allows me to focus on my work without being slowed down by system issues or other distractions. The customizable nature of Fedora has also helped me set up my desktop environment in a way that works best for me, further contributing to my increased productivity.
 
-## Paragraph
+Another advantage of using Fedora is the package management system, dnf (Dandified YUM). This system makes it easy to install, update, and remove software packages, saving me time and effort compared to manually downloading and installing applications on Windows.
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+In terms of performance, I've found that Fedora performs just as well, if not better, than Windows on my machine. It's lightweight and runs smoothly, even when I have multiple applications open at the same time. It also uses substantially less RAM than Windows, which is always a bonus.
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+Finally, I switched to Fedora because I agree with the philosophy behind the operating system. As an open source project, Fedora is built on the principles of collaboration, transparency, and community-driven development. This aligns with my own values and the way I like to work.
 
-## Blockquotes
+In conclusion, there are many reasons why I switched to Fedora from Windows. The level of customization available, the Modern Standby issues I was experiencing on Windows, the increased productivity, the efficient package management system, the excellent performance, and the philosophy behind the operating system all contributed to my decision to make the switch. If you're a developer looking for a reliable and customizable operating system, I highly recommend giving Fedora Workstation 37 a try.
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+---
 
-#### Blockquote without attribution
-
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-> **Note** that you can use *Markdown syntax* within a blockquote.
-
-#### Blockquote with attribution
-
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
-
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
-
-## Tables
-
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
-
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
-
-#### Inline Markdown within tables
-
-| Italics   | Bold     | Code   |
-| --------  | -------- | ------ |
-| *italics* | **bold** | `code` |
-
-## Code Blocks
-
-#### Code block with backticks
-
-```html
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-```
-
-#### Code block indented with four spaces
-
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
-
-#### Code block with Hugo's internal highlight shortcode
-{{< highlight html >}}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
-
-## List Types
-
-#### Ordered List
-
-1. First item
-2. Second item
-3. Third item
-
-#### Unordered List
-
-* List item
-* Another item
-* And another item
-
-#### Nested list
-
-* Fruit
-  * Apple
-  * Orange
-  * Banana
-* Dairy
-  * Milk
-  * Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+Thanks for reading! If you enjoyed this post, consider following me on [GitHub](https://github.com/rico-vz) to stay up to date with my latest projects and contributions.
