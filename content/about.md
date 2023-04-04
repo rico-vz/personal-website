@@ -2,6 +2,7 @@
 author = "Rico van Zelst"
 title = "About Me"
 date = "2023-04-04"
+draft = true
 description = "Rico van Zelst: Learn more about me."
 +++
 
