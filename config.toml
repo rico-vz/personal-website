@@ -1,4 +1,4 @@
-baseURL = 'https://ricovz.me'
+baseURL = 'https://nimble-biscochitos-0a3d06.netlify.app/'
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
 disableHugoGeneratorInject = 'true'
