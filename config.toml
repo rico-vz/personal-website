@@ -1,0 +1,20 @@
+baseURL = 'https://ricovz.me'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+disableHugoGeneratorInject = 'true'
+title = 'Rico van Zelst'
+theme = 'archie'
+enableEmoji = 'true'
+enableRobotsTXT = 'true'
+timeZone = 'Europe/Amsterdam'
+watch = 'true'
+enableInlineShortcodes = true
+paginate = 3
+
+[params]
+	mode="toggle" # color-mode → light,dark,toggle or auto
+	useCDN= true 
+	subtitle = "19-year-old software engineer, willing to assist organizations in building the best technical solutions in today's competitive market."
+	mathjax = false
+	katex = false
+    favicon = "/rico-logo.png"
