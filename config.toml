@@ -17,11 +17,12 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto
 	useCDN = false
-	subtitle = "19-year-old software engineer, willing to assist organizations in building the best technical solutions in today's competitive market."
+	subtitle = "19-year-old software engineer, willing to assist organizations in building the best technical solutions in today’s competitive market."
 	mathjax = false
 	katex = false
     favicon = "/rico-logo.png"
 	exclude = ["/content/about.md"]
+	description = "Rico van Zelst: 19-year-old software engineer, willing to assist organizations in building the best technical solutions in today’s competitive market."
 
 # Socials
 [[params.social]]
