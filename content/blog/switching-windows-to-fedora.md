@@ -7,6 +7,8 @@ tags = [ "linux", "productivity", "fedora" ]
 slug = "switching-windows-fedora-developer-experience"
 categories = [ "Operating Systems", "Technology" ]
 preview = "/fedora.png"
+images = [ "/fedora.png" ]
+type = "default"
 +++
 
 As a passionate developer, I am constantly looking for ways to improve my workflow and increase my productivity. That's why, after almost a decade of Windows as my primary operating system, I decided to make the switch to Fedora Workstation 37 on my laptop. Here are a few reasons why I made the switch and why I think it's a great choice for other developers.
