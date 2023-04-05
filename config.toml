@@ -9,7 +9,6 @@ enableRobotsTXT = 'true'
 timeZone = 'Europe/Amsterdam'
 watch = 'true'
 enableInlineShortcodes = true
-paginate = 3
 pygmentsstyle = "github-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
@@ -58,6 +57,6 @@ pygmentscodefencesguesssyntax = true
 	weight = 3
 
 [[menu.main]]
-	name = "Tags"
-	url = "/tags"
+	name = "Contact"
+	url = "/contact"
 	weight = 4

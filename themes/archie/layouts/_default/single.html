@@ -5,12 +5,16 @@
 			<h1 class="title">{{ .Title }}</h1>
 			<div class="meta">
 				{{ .Params.description }}
-				<br><br>
-				Posted on {{ dateFormat "Jan 2, 2006" .Date }}
+
+				{{ if and (isset . "Date") (ne (dateFormat "Jan 1, 0001" .Date) "Jan 1, 0001") }}
+				<br><br> Posted on {{ dateFormat "Jan 2, 2006" .Date }}
+				{{ end }}
+
+
 				<br>
 				Author: {{ .Params.author }}
 				{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
-			 </div>
+			</div>
 		</div>
 		{{ if isset .Params "tldr" }}
 		<div class="tldr">
@@ -28,7 +32,7 @@
 			<nav class="nav tags">
 				<ul class="tags">
 					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+					<li><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 					{{ end }}
 				</ul>
 			</nav>
