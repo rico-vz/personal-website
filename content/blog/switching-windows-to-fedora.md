@@ -1,7 +1,7 @@
 +++
 author = "Rico van Zelst"
 title = "Switching from Windows to Fedora: A Developer's Experience"
-date = "2023-01-09"
+date = "2023-01-04"
 description = "Fedora Workstation 37 is a reliable, customizable operating system with efficient package management, excellent performance, and community-driven development."
 tags = [ "linux", "productivity", "fedora" ]
 slug = "switching-windows-fedora-developer-experience"

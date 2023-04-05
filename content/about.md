@@ -1,9 +1,9 @@
 +++
 author = "Rico van Zelst"
 title = "About Me"
-date = "2023-04-04"
-draft = true
+date = "2023-04-05"
 description = "Rico van Zelst: Learn more about me."
+hidden = true
 +++
 
 ## Introduction

@@ -21,6 +21,7 @@ pygmentscodefencesguesssyntax = true
 	mathjax = false
 	katex = false
     favicon = "/rico-logo.png"
+	exclude = ["/content/about.md"]
 
 # Socials
 [[params.social]]

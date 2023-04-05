@@ -78,17 +78,21 @@
     }
   ],
   "frontMatter.taxonomy.tags": [
+    "collaboration",
     "fedora",
     "index",
     "linux",
     "markdown",
+    "pairprogramming",
     "privacy",
     "productivity",
     "shortcodes",
     "text"
   ],
   "frontMatter.taxonomy.categories": [
+    "Learning",
     "Operating Systems",
+    "Teamwork",
     "Technology"
   ]
 }

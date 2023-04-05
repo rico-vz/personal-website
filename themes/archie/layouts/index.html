@@ -11,10 +11,12 @@
         {{- end -}}
       </div>
       {{ if not .Paginator.HasPrev }} {{ partial "home.html" }} {{ end }}
+      <h1>Recent Posts</h1>
       <main class="list">
-        {{ $pages := where .Site.RegularPages "Type" "in"
-        .Site.Params.mainSections }} {{ $paginator := .Paginate (where $pages
-        "Params.hidden" "ne" true) }} {{ range $paginator.Pages }}
+        {{ $pages := where .Site.RegularPages "Section" "blog" }} {{ $pages =
+        where $pages "Type" "!=" "about" }} {{ $paginator := .Paginate (where
+        $pages "Params.hidden" "ne" true) }} {{ range $paginator.Pages }} {{- if
+        not .Params.hidden }}
         <section class="list-item">
           <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
           <time
@@ -24,7 +26,7 @@
           <br />{{ template "partials/pagedescription.html" . }}
           <a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
         </section>
-        {{ end }} {{ template "partials/paginator.html" . }}
+        {{- end }} {{ end }} {{ template "partials/paginator.html" . }}
       </main>
       {{ partial "footer.html" . }}
     </div>
