@@ -1,7 +1,7 @@
 
 # Personal Portfolio/Website
 
-This is my personal website its sourcecode (preview can be found at https://ricovz.me)
+This is my personal website its sourcecode 
 
 I made it using Angular & TailwindCSS using the "Catppucin" color scheme.
 
