@@ -1,9 +1,7 @@
 <footer>
   <div style="display: flex">
     {{- range $index, $key := .Site.Params.Social -}}
-    <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"
-      ><i data-feather="{{ $key.icon }}"></i
-    ></a>
+    <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
     <p class="border"></p>
     {{- end -}}
   </div>
@@ -11,6 +9,12 @@
     2021 - {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{
     end }}
     <a href="https://ricovz.me">Rico van Zelst</a>
+  </div>
+  <div class="footer-seo">
+    &nbsp;|
+    <a href="
+      https://ricovz.me/sitemap.xml">Sitemap</a>&nbsp;|
+    <a href="https://ricovz.me/blog/index.xml">Blog RSS</a>
   </div>
 </footer>
 {{ if not .Site.IsServer }} {{ template "_internal/google_analytics_async.html"
