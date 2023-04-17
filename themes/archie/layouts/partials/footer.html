@@ -19,6 +19,15 @@
 </footer>
 {{ if not .Site.IsServer }} {{ template "_internal/google_analytics_async.html"
 . }} {{ end }} {{- if (isset .Site.Params "social") -}}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KM6VW8ZZSF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-KM6VW8ZZSF');
+</script>
 <script>
   feather.replace();
 </script>
