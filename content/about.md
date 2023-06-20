@@ -6,7 +6,7 @@ hidden = true
 +++
 
 ## Introduction
-My name is Rico van Zelst, and I am a highly motivated and dedicated 19-year-old software engineering student at Bit Academy. As a student of software engineering, I am deeply committed to expanding my knowledge and honing my skills in the field. In addition to my studies, I am also actively engaged in a variety of freelance web development projects that serve to further my understanding of the industry and its many nuances.
+My name is Rico van Zelst, and I am a highly motivated and dedicated 20-year-old software engineering student at Bit Academy. As a student of software engineering, I am deeply committed to expanding my knowledge and honing my skills in the field. In addition to my studies, I am also actively engaged in a variety of freelance web development projects that serve to further my understanding of the industry and its many nuances.
 
 
 ## Passion for Software Development
