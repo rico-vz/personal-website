@@ -1,4 +1,6 @@
-# ricovz.me | Personal Website v2 (astro)
+# Rico: | Personal Website v2 (astro)
+
+Preview: https://ricovz-me.vercel.app/
 
 Features:
 
