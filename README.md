@@ -7,7 +7,7 @@ I made it using Angular & TailwindCSS using the "Catppucin" color scheme.
 
 ## Demo
 
-https://ricovz.me
+[personal-website-v2-xi.vercel.app](https://personal-website-v2-xi.vercel.app/)
 ## Installation
 
 Install personal-portfolio with npm
