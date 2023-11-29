@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "header.html" . }}
+  <body>
+    <div class="content">
+      {{ partial "head.html" . }}
+
+      <div class="site-description">
+        {{- if isset .Site.Params "subtitle" -}}
+        <p>{{ .Site.Params.Subtitle | markdownify }}</p>
+        {{- end -}}
+      </div>
+      {{ if not .Paginator.HasPrev }} {{ partial "home.html" }} {{ end }}
+      <h1>Recent Posts</h1>
+      <main class="list">
+        {{ $pages := where .Site.RegularPages "Section" "blog" }} {{ $pages =
+        where $pages "Type" "!=" "about" }} {{ $paginator := .Paginate (where
+        $pages "Params.hidden" "ne" true) }} {{ $count := 0 }} {{ range
+        $paginator.Pages.ByDate.Reverse | first 3 }} {{- if not .Params.hidden
+        }}
+        <section class="list-item">
+          <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+          <time
+            >{{ dateFormat "Jan 2, 2006" .Date }} {{ if .Draft }}<span
+              class="draft-label"
+              >DRAFT</span
+            >{{ end }}
+          </time>
+          <br />
+          {{ template "partials/pagedescription.html" . }}
+          <a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+        </section>
+        {{ $count = add $count 1 }} {{- end }} {{ end }}
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>

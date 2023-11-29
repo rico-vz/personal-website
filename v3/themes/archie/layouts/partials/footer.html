@@ -1,0 +1,33 @@
+<footer>
+  <div style="display: flex">
+    {{- range $index, $key := .Site.Params.Social -}}
+    <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+    <p class="border"></p>
+    {{- end -}}
+  </div>
+  <div class="footer-info">
+    2021 - {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{
+    end }}
+    <a href="https://ricovz.me">Rico van Zelst</a>
+  </div>
+  <div class="footer-seo">
+    &nbsp;|
+    <a href="
+      https://ricovz.me/sitemap.xml">Sitemap</a>&nbsp;|
+    <a href="https://ricovz.me/blog/index.xml">Blog RSS</a><a href="https://linktr.ee/ricovzelst">.</a>
+  </div>
+</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KM6VW8ZZSF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-KM6VW8ZZSF');
+</script>
+{{- if (isset .Site.Params "social") -}}
+<script>
+  feather.replace();
+</script>
+{{- end -}}

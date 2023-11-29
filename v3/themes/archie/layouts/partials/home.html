@@ -1,0 +1,41 @@
+<h1>Hey, I'm Rico.</h1>
+<p>
+  As a highly motivated and ambitious 20-year-old software engineer, I am
+  committed to utilizing my knowledge and skills to assist organizations in
+  building the most effective and efficient technical solutions in today's
+  competitive market. Through my studies, as well as my involvement in various
+  projects, I have developed a strong understanding of the industry and the
+  challenges it faces. I am confident in my ability to contribute to the success
+  of any organization and am eager to apply my knowledge and expertise to
+  real-world projects. If you would like to learn more about me check out
+  <a href="/about">/about</a>.<br />
+  <br />Here are some of my open source projects:
+</p>
+<ul id="projects-list"></ul>
+<script>
+  fetch(
+    "https://api.github.com/users/rico-vz/repos?sort=updated&direction=desc"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const projects = data
+        .filter((project) => !project.fork) // exclude forks lmao
+        .sort((a, b) => b.stargazers_count - a.stargazers_count) // sort by stars count
+        .slice(0, 3); // get the first 3 projects
+      const projectsList = document.getElementById("projects-list");
+      projects.forEach((project) => {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = project.html_url;
+        link.target = "_blank";
+        link.textContent = project.name;
+        const description = document.createElement("p");
+        description.textContent =
+          project.description || "No description available";
+        listItem.appendChild(link);
+        listItem.appendChild(description);
+        projectsList.appendChild(listItem);
+      });
+    })
+    .catch((error) => console.error(error));
+</script>
