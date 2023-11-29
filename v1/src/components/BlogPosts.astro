@@ -1,0 +1,93 @@
+---
+---
+
+<div id="latest-posts"></div>
+
+<script>
+  const getLatestPosts = async () => {
+    // check if data is already stored in localStorage
+    const data = localStorage.getItem("latestPosts");
+    if (data) {
+      const { timestamp, posts } = JSON.parse(data);
+      // check if timestamp is older than 24 hours
+      if (Date.now() - timestamp < 24 * 60 * 60 * 1000) {
+        // data is still fresh, return stored data
+        return posts;
+      }
+    }
+
+    // data is not stored or is older than 24 hours, make new API call
+    const posts = await fetch(
+      "https://dev.to/api/articles?username=ricovz"
+    ).then((res) => res.json());
+
+    // store data in localStorage with timestamp
+    localStorage.setItem(
+      "latestPosts",
+      JSON.stringify({ timestamp: Date.now(), posts })
+    );
+
+    return posts.slice(0, 3);
+  };
+
+  const createPostCard = (post) => {
+    const card = document.createElement("div");
+    card.classList.add(
+      "card",
+      "shadow-xl",
+      "p-1",
+      "hover:bg-gradient-to-bl",
+      "bg-gradient-to-tr",
+      "from-base-200",
+      "to-base-300",
+      "hover:scale-[103.5%]",
+      "duration-300"
+    );
+    card.innerHTML = `
+      <div class="card lg:w-96 bg-base-100 h-full hover:shadow-2xl">
+        <figure>
+          <a href="${post.url}" target="_blank" rel="noreferrer">
+            <img src="${post.cover_image}" alt="Article cover image" />
+          </a>
+        </figure>
+        <div class="card-body">
+          <a href="${post.url}" target="_blank" rel="noreferrer">
+            <h2 class="card-title text-base-content ">${post.title}</h2>
+          </a>
+          <p class="text-neutral-content mb-4">${post.description}</p>
+          <div class="card-actions justify-end mb-1">
+            <a href="${post.url}" target="_blank" rel="noreferrer">
+              <p class="text-base-content font-medium">
+                Read article <i class="inline-block"><svg width="0.67em" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M323.431,268.226,100.493,45.709a27.57,27.57,0,0,0-38.933,0l-26,25.957a27.444,27.444,0,0,0-.046,38.815L212.2,287.657,35.521,464.844a27.434,27.434,0,0,0,.046,38.815l26,25.957a27.57,27.57,0,0,0,38.933,0L323.431,307.087A27.448,27.448,0,0,0,323.431,268.226Z" transform="translate(70.507 -37.662)"></path></svg></i>
+              </p>
+            </a>
+          </div>
+          <div class="card-actions justify-end ">
+            ${post.tag_list
+              .slice(0, 2)
+              .map(
+                (tag) =>
+                  `<span class="badge badge-outline text-primary px-2 py-4">#${tag}</span>`
+              )
+              .join("")}
+          </div>
+        </div>
+      </div>
+    `;
+    return card;
+  };
+
+  const appendPostCards = (posts) => {
+    const container = document.getElementById("latest-posts");
+    container.classList.add(
+      "grid",
+      "grid-cols-1",
+      "md:grid-cols-3",
+      "gap-4",
+      "mb-12"
+    );
+    posts.forEach((post) => container.appendChild(createPostCard(post)));
+  };
+
+  getLatestPosts().then(appendPostCards);
+</script>

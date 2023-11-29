@@ -1,0 +1,30 @@
+{
+  "name": "ricovz.me",
+  "type": "module",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.12.2",
+    "@astrojs/rss": "^1.2.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^2.1.3",
+    "@astrojs/vercel": "^3.0.0",
+    "astro": "^1.6.15",
+    "astro-compress": "^1.1.27",
+    "astro-critters": "^1.1.26",
+    "daisyui": "^2.43.2",
+    "theme-change": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}

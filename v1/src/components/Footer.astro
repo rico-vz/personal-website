@@ -1,0 +1,81 @@
+---
+const today = new Date();
+import Analytics from "../components/Analytics.astro";
+---
+
+<div
+  class="ball ball-transitions pointer-events-none fixed z-[1000] h-6 w-6 rounded-full opacity-50 bg-neutral-content shadow-md duration-200"
+>
+</div>
+
+<script is:inline>
+  const ball = document.querySelector(".ball");
+
+  function loadCursor(ball) {
+    let x = window.innerWidth / 2;
+    let y = window.innerHeight / 2;
+
+    let ballX = x;
+    let ballY = y;
+
+    function drawBall() {
+      ballX += (x - ballX) * 0.1 - 1;
+      ballY += (y - ballY) * 0.1 - 1;
+
+      ball.style.top = `${ballY - window.scrollY}px`;
+      ball.style.left = `${ballX}px`;
+    }
+
+    function loop() {
+      drawBall();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    function touch(event) {
+      x = event.touches[0]?.pageX;
+      y = event.touches[0]?.pageY;
+    }
+
+    function mousemove(event) {
+      x = event.pageX;
+      y = event.pageY;
+    }
+
+    function mousedown() {
+      ball.style.transform = "scale(1.5)";
+    }
+
+    function mouseup() {
+      ball.style.transform = "scale(1)";
+    }
+
+    window.addEventListener("touchstart", touch);
+    window.addEventListener("touchmove", touch);
+    window.addEventListener("mousemove", mousemove);
+    window.addEventListener("mousedown", mousedown);
+    window.addEventListener("mouseup", mouseup);
+
+    return () => {
+      window.removeEventListener("touchstart", touch);
+      window.removeEventListener("touchmove", touch);
+      window.removeEventListener("mousemove", mousemove);
+      window.removeEventListener("mousedown", mousedown);
+      window.removeEventListener("mouseup", mouseup);
+    };
+  }
+
+  loadCursor(ball);
+</script>
+
+<footer
+  class="footer items-center p-4 bg-base-100 text-neutral-content text-center font-jb-mono"
+>
+  <div class="items-center mx-auto font-semibold">
+    <p>
+      Copyright © {today.getFullYear()} • All right reserved • Rico van Zelst
+    </p>
+  </div>
+</footer>
+<Analytics />

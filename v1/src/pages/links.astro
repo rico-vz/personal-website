@@ -1,0 +1,36 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LinkTabs from "../components/LinkTabs.astro";
+import { SITE_DESCRIPTION } from "../config";
+import Analytics from "../components/Analytics.astro";
+import SocialBanner from "../components/SocialBanner.astro";
+import LangsBanner from "../components/LangsBanner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title="Home | Rico van Zelst" description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-neutral font-montserrat">
+    <Header title="Rico van Zelst" />
+    <main>
+      <div class="mt-6 min-h-screen">
+        <h1
+          class="text-center text-neutral-content text-5xl font-extrabold mb-6 tracking-wide"
+        >
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            >Links</span
+          >
+        </h1>
+        <div class="flex justify-center">
+          <LinkTabs />
+        </div>
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>
